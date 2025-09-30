@@ -1,37 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React User Card Component - Coding Challenge
 
-## Getting Started
+## Overview
+Build an interactive user card component that displays user information with follow/unfollow functionality. This challenge tests your understanding of React state management, event handling, and TypeScript basics.
 
-First, run the development server:
+## Time Limit
+30-45 minutes
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Starting Point
+You've been provided with a basic `UserCard` component that displays static user information. Your job is to make it interactive by implementing the requirements below.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requirements
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Part 1: TypeScript Interface (5 min)
+1. Create a proper `User` interface with these fields:
+   - `id`: number
+   - `name`: string
+   - `email`: string
+   - `bio`: string
+   - `avatar`: string (URL)
+   - `stats`: object with `projects`, `followers`, `following` (all numbers)
+   - `isFollowing`: boolean
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Update the `UserCardProps` to properly type the `user` prop
 
-## Learn More
+### Part 2: Follow/Unfollow Feature (20 min)
+3. Implement state management for the follow functionality:
+   - Track whether the user is being followed
+   - Track the current follower count
 
-To learn more about Next.js, take a look at the following resources:
+4. Create a Follow/Unfollow button that:
+   - Shows "Follow" when not following (blue background)
+   - Shows "Following" when following (gray background)
+   - Updates the follower count (+1 when following, -1 when unfollowing)
+   - Toggles between states on click
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Part 3: Bio Editing (15 min)
+5. Add an "Edit" button next to the "About" heading
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. Implement bio editing functionality:
+   - Clicking "Edit" shows a textarea with the current bio
+   - Display "Save" and "Cancel" buttons in edit mode
+   - "Save" updates the bio and exits edit mode
+   - "Cancel" discards changes and exits edit mode
 
-## Deploy on Vercel
+### Bonus (Optional)
+- Add hover effects to buttons
+- Disable the Save button if bio is empty
+- Add a character counter for the bio (max 280 characters)
+- Add smooth transitions between states
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Evaluation Criteria
+- **Functionality** (40%): All features work correctly
+- **React Patterns** (30%): Proper use of useState and event handlers
+- **TypeScript** (15%): Correct type definitions
+- **Code Quality** (15%): Clean, readable code with good naming
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# devq
+## Tips
+- Start with the TypeScript interface to understand the data structure
+- Implement one feature at a time and test as you go
+- Remember: state updates are asynchronous
+- Use the TODO comments in the code as a guide
+
+Good luck!

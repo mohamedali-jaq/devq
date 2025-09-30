@@ -1,36 +1,16 @@
-"use client"
+import UserCard from "./components/user-card"
 
-import UserCard from "./components/UserCard"
+// TODO: Create an array of user objects with at least 3 different users
+// Each user should have all required fields from the User interface
 
-export default function Home() {
+// TODO: Implement user switching functionality
+// Could use tabs, buttons, or a dropdown to switch between users
+
+export default function Page() {
   return (
-    <main className="container">
-      <h1>Developer Challenge</h1>
-      <p>Welcome to our coding challenge! Fix the desktop layout issues and linting error's. It seems the profile picture isn't showing up as well.</p>
+    <main className="min-h-screen bg-gray-100 py-8">
+      {/* TODO: Update this to display multiple users with switching capability */}
       <UserCard />
-
-      <style jsx>{`
-        .container {
-          padding: 20px;
-          max-width: 1200px;
-          margin: 0 auto;
-          height: 400px;
-          overflow: hidden;
-          position: relative;
-        }
-        
-        .container h1 {
-          font-size: 32px;
-          margin-bottom: 8px;
-          color: #1a1a1a;
-        }
-        
-        .container p {
-          color: #666;
-          margin-bottom: 20px;
-          font-size: 18px;
-        }
-      `}</style>
     </main>
   )
 }
