@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="container">
       <h1>Developer Challenge</h1>
-      <p>Welcome to our coding challenge! Fix the desktop layout issues and linting error's.</p>
+      <p>Welcome to our coding challenge! Fix the desktop layout issues and linting error's. It seems the profile picture isn't showing up as well.</p>
       <UserCard />
 
       <style jsx>{`
